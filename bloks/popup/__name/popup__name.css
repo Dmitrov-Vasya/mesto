@@ -1,0 +1,12 @@
+.popup__name {
+  width: 238px;
+  padding-top: 75px;
+  margin: 0;
+  margin-left: 22px;
+  margin-right: 22px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-align: center;
+}

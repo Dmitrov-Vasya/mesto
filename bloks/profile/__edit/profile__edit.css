@@ -1,0 +1,13 @@
+.profile__edit {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  margin-right: 19px;
+  margin-top: 10px;
+  background-color: black;
+  border: 2px solid white;
+  background-image: url(../../../images/редактирование.svg);
+  background-repeat: no-repeat;
+  background-size: 7.5px 7.5px;
+  background-position: center;
+}
