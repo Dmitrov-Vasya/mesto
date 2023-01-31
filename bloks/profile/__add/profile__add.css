@@ -11,3 +11,11 @@
   background-position: center;
   background-color: black;
 }
+
+@media screen and (max-width: 1280px) {
+  .profile__add {
+    max-width: 150px;
+    max-height: 50px;
+    background-size: 22px 22px;
+  }
+}

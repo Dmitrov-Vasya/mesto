@@ -1,10 +1,13 @@
 @import url(../vender/normalize.css);
+@import url(../vender/font/Inter-3.19/inter.css);
 @import url(../bloks/page/page.css);
 @import url(../bloks/header/header.css);
 @import url(../bloks/header/__logo/header__logo.css);
+@import url(../bloks/header/__line/header__line.css);
 @import url(../bloks/main/main.css);
 @import url(../bloks/profile/profile.css);
 @import url(../bloks/profile/__avatar/profile__avatar.css);
+@import url(../bloks/profile/__wrapper/profile__wrapper.css);
 @import url(../bloks/profile/__info/profile__info.css);
 @import url(../bloks/profile/__info-name/profile__info-name.css);
 @import url(../bloks/profile/__edit/profile__edit.css);

@@ -2,5 +2,12 @@
   max-width: 282px;
   margin-top: 22px;
   display: flex;
-  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1280px) {
+  .profile__info {
+    max-width: 336px;
+    margin: 0;
+    justify-content: space-between;
+  }
 }

@@ -9,3 +9,12 @@
   display: flex;
   justify-content: end;
 }
+
+@media screen and (max-width: 1280px) {
+  .popup__close {
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+    background-size: 32px 32px;
+  }
+}

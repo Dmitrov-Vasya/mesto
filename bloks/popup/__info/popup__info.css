@@ -1,5 +1,5 @@
 .popup__info {
-  width: 238px;
+  max-width: 238px;
   padding-top: 30px;
   margin: 0;
   margin-left: 22px;
@@ -8,6 +8,11 @@
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-  display: flex;
-  justify-content: end;
+}
+@media screen and (max-width: 1280px) {
+  .popup__info {
+    max-width: 358px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
 }

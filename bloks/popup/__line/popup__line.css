@@ -1,8 +1,15 @@
 .popup__line {
-  width: 238px;
+  max-width: 238px;
   margin-left: 22px;
   margin-right: 22px;
   margin-top: 13px;
   opacity: 0.2;
   border: 1px solid #000000;
+}
+@media screen and (max-width: 1280px) {
+  .popup__line {
+    max-width: 358px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
 }
