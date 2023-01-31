@@ -6,7 +6,7 @@
   opacity: 0.2;
   border: 1px solid #000000;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .popup__line {
     max-width: 358px;
     margin-left: 36px;

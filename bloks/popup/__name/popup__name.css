@@ -10,7 +10,7 @@
   color: #000000;
   text-align: center;
 }
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .popup__name {
     padding-top: 54px;
     max-width: 358px;

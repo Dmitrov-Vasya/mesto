@@ -10,7 +10,7 @@
   justify-content: end;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .popup__close {
     width: 32px;
     height: 32px;

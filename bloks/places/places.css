@@ -4,7 +4,7 @@
   margin-bottom: 28px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .places {
     max-width: 880px;
     margin-top: 47px;
