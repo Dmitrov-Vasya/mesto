@@ -1,5 +1,6 @@
 .popup__name {
   max-width: 238px;
+  padding: 0;
   padding-top: 75px;
   margin: 0;
   margin-left: 22px;
@@ -13,7 +14,6 @@
 @media screen and (min-width: 1280px) {
   .popup__name {
     padding-top: 54px;
-    max-width: 358px;
     margin-left: 36px;
     margin-right: 36px;
   }

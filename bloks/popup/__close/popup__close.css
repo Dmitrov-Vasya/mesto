@@ -3,18 +3,22 @@
   height: 20px;
   margin-bottom: 16px;
   margin-left: auto;
+  margin-right: auto;
   background-color: black;
   background-image: url(../../../images/Close\ Icon.svg);
   background-position: center;
   display: flex;
-  justify-content: end;
+
+  position: absolute;
 }
 
 @media screen and (min-width: 1280px) {
   .popup__close {
+    margin-right: 385px;
     width: 32px;
     height: 32px;
     margin-left: auto;
     background-size: 32px 32px;
+    margin-top: 155px;
   }
 }
