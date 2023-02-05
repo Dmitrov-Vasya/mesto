@@ -7,7 +7,7 @@
   margin-top: 10px;
   background-color: black;
   border: 2px solid white;
-  background-image: url(../../../images/редактирование.svg);
+  background-image: url(../../../images/edit.svg);
   background-repeat: no-repeat;
   background-size: 7.5px 7.5px;
   background-position: center;
@@ -16,11 +16,11 @@
 
 @media screen and (min-width: 1280px) {
   .profile__edit {
-    max-width: 24px;
-    max-height: 24px;
+    width: 24px;
+    height: 24px;
     margin: 0;
     margin-left: 18px;
     margin-right: auto;
-    background-size: 7px 7px;
+    background-size: 10px 10px;
   }
 }

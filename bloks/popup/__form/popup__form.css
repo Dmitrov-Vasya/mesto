@@ -1,4 +1,14 @@
 .popup__form {
   padding-top: 75px;
+  padding-left: 22px;
+  padding-right: 22px;
   display: block;
+}
+
+@media screen and (min-width: 1280px) {
+  .popup__form {
+    padding-top: 54px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 }

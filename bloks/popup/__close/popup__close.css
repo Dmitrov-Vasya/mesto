@@ -1,24 +1,21 @@
 .popup__close {
   width: 20px;
   height: 20px;
-  margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: black;
-  background-image: url(../../../images/Close\ Icon.svg);
-  background-position: center;
-  display: flex;
-
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  background-repeat: no-repeat;
+  background-image: url(../../../images/close.svg);
   position: absolute;
+  top: -36px;
+  right: 0px;
 }
 
 @media screen and (min-width: 1280px) {
   .popup__close {
-    margin-right: 385px;
     width: 32px;
     height: 32px;
-    margin-left: auto;
-    background-size: 32px 32px;
-    margin-top: 155px;
+    top: -40px;
+    right: -40px;
   }
 }

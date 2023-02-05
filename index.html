@@ -9,23 +9,19 @@
   </head>
   <body class="page">
     <header class="header">
-      <img
-        src="../mesto/images/логотип.svg"
-        alt="Логотип"
-        class="header__logo"
-      />
+      <img src="../mesto/images/logo.svg" alt="Логотип" class="header__logo" />
     </header>
     <main class="main">
       <section class="profile">
         <img
-          src="../mesto/images/кусто.jpg"
+          src="../mesto/images/Kysto.jpg"
           alt="Кусто"
           class="profile__avatar"
         />
         <div class="pofile__wrapper">
           <div class="profile__info">
             <h2 class="profile__info-name">Василий</h2>
-            <button class="profile__edit"></button>
+            <button class="profile__edit" type="button"></button>
           </div>
           <p class="profile__info-text">Будущий Веб-разработчик</p>
         </div>
@@ -33,7 +29,11 @@
       </section>
       <section class="places">
         <div class="place">
-          <img src="images/Чуктока.jpg" alt="Чукотка" class="place__photo" />
+          <img
+            src="../mesto/images/Chukotka.jpg"
+            alt="Чукотка"
+            class="place__photo"
+          />
           <div class="place__background">
             <h2 class="place__name">Чукотский АО</h2>
             <button class="place__button-like"></button>
@@ -41,7 +41,7 @@
         </div>
         <div class="place">
           <img
-            src="images/Берениновский.jpg"
+            src="../mesto/images/Beringovsky.jpg"
             alt="Берениновский"
             class="place__photo"
           />
@@ -52,7 +52,7 @@
         </div>
         <div class="place">
           <img
-            src="images/Первомайка.jpg"
+            src="../mesto/images/Pervomayka.jpg"
             alt="Первомайка"
             class="place__photo"
           />
@@ -62,14 +62,22 @@
           </div>
         </div>
         <div class="place">
-          <img src="images/Анадырь.jpg" alt="Анадырь" class="place__photo" />
+          <img
+            src="../mesto/images/Anadyr.jpg"
+            alt="Анадырь"
+            class="place__photo"
+          />
           <div class="place__background">
             <h2 class="place__name">г.Анадырь</h2>
             <button class="place__button-like"></button>
           </div>
         </div>
         <div class="place">
-          <img src="images/moskva-dnr.jpg" alt="Москва" class="place__photo" />
+          <img
+            src="../mesto/images/Moskva.jpg"
+            alt="Москва"
+            class="place__photo"
+          />
           <div class="place__background">
             <h2 class="place__name">г.Москва</h2>
             <button class="place__button-like"></button>
@@ -77,7 +85,7 @@
         </div>
         <div class="place">
           <img
-            src="images/мисайлово.jpg"
+            src="../mesto/images/Misailovo.jpg"
             alt="мисайлово"
             class="place__photo"
           />
@@ -94,19 +102,25 @@
 
     <section class="popup">
       <div class="popup__container">
-        <button class="popup__close"></button>
+        <button class="popup__close" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form action="./pages/index.js" name="popup__form" class="popup__form">
-          <input class="popup__name" type="text" placeholder="Жак-Ив Кусто" />
           <input
-            name="popup__info"
+            class="popup__input popup__input_type_name"
+            name="popup__input"
+            type="text"
+            placeholder="Жак-Ив Кусто"
+          />
+          <input
+            name="popup__input"
+            class="popup__input popup__input_type_info"
             type="text"
             placeholder="Исследователь океана"
           />
-          <button class="popup__save" type="button">Сохранить</button>
+          <button class="popup__save" type="submit">Сохранить</button>
         </form>
       </div>
     </section>
-    <script src="./pages/index.js"></script>
+    <script src="./JS/index.js"></script>
   </body>
 </html>
