@@ -9,6 +9,7 @@
   position: absolute;
   top: -36px;
   right: 0px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1280px) {
@@ -18,4 +19,7 @@
     top: -40px;
     right: -40px;
   }
+}
+.profile__close:hover {
+  opacity: 0.6;
 }

@@ -11,6 +11,7 @@
   font-size: 14px;
   line-height: 17px;
   text-align: center;
+  cursor: pointer;
 }
 @media screen and (min-width: 1280px) {
   .popup__save {
@@ -22,4 +23,7 @@
     line-height: 22px;
     background-size: 358px 50px;
   }
+}
+.profile__save:hover {
+  opacity: 0.8;
 }
