@@ -6,7 +6,7 @@
   margin-right: 19px;
   margin-top: 10px;
   background-color: black;
-  border: 2px solid white;
+  border: 1px solid white;
   background-image: url(../../../images/edit.svg);
   background-repeat: no-repeat;
   background-size: 7.5px 7.5px;
@@ -15,7 +15,7 @@
   transition: opacity 1s linear 0.5s;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 880px) {
   .profile__edit {
     width: 24px;
     height: 24px;

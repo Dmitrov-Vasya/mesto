@@ -6,8 +6,11 @@
   text-align: center;
   margin: 0;
   margin-left: 46px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 880px) {
   .profile__info-name {
     max-width: 294px;
     margin: 0;
