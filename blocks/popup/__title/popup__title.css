@@ -1,7 +1,7 @@
 .popup__title {
-  text-align: center;
+  text-align: start;
   font-weight: 900;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 22px;
   color: #000000;
   margin: 0;
