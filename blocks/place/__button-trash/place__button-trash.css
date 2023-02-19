@@ -1,21 +1,18 @@
-.place__button-like {
-  width: 22px;
+.place__button-trash {
+  position: absolute;
+  width: 18px;
   height: 19px;
   border: 0px solid white;
   padding: 0;
-  margin-top: 30px;
-  margin-bottom: 30px;
   margin-right: 20px;
+  margin-left: 244px;
+  margin-top: 20px;
   background-color: transparent;
-  background-image: url(../../../images/heart.svg);
+  background-image: url(../../../images/trash.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   transition: opacity 1s linear 0.5s;
   flex-shrink: 0;
-}
-
-.profile__button-like:hover {
-  opacity: 0.6;
 }
