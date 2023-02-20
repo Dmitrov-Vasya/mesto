@@ -1,10 +1,9 @@
 /* открыть и закрыть popup  edit*/
 const profileEdit = document.querySelector('.profile__edit');
-const popup = document.querySelector('.popup');
 const popupEdit = document.querySelector('.popup_type_edit');
 
 // popup_type_image переменные
-const profileImageButton = document.querySelector('.place__photo');
+const placePhotobutton = document.querySelector('.place__photo');
 const popupImage = document.querySelector('.popup_type_image');
 const popupPicture = document.querySelector('.popup__picture');
 const popupTextImage = document.querySelector('.popup__text');
@@ -21,26 +20,17 @@ profileEdit.addEventListener('click', () => {
   infoInput.value = profilIinfoText.textContent;
 });
 
-const popupClose = document.querySelectorAll('.popup__close');
-popupClose.forEach((button) => {
-  button.addEventListener('click', () => {
-    const popupOpened = document.querySelector('.popup_opened');
-    closePopup(popupOpened);
-  });
+const closeButtons = document.querySelectorAll('.popup__close');
+closeButtons.forEach((button) => {
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () => closePopup(popup));
 });
 
-const formElement = popup.querySelector('.popup__form');
-const nameInput = popup.querySelector('.popup__input_type_name');
-const infoInput = popup.querySelector('.popup__input_type_info');
+const popupForm = popupEdit.querySelector('.popup__form');
+const nameInput = popupEdit.querySelector('.popup__input_type_name');
+const infoInput = popupEdit.querySelector('.popup__input_type_info');
 const profileInfoName = document.querySelector('.profile__info-name ');
 const profilIinfoText = document.querySelector('.profile__info-text ');
-function handleFormSubmit(evt) {
-  evt.preventDefault();
-  closePopup(popupEdit);
-  profileInfoName.textContent = nameInput.value;
-  profilIinfoText.textContent = infoInput.value;
-}
-formElement.addEventListener('submit', handleFormSubmit);
 
 /*popup_type_add*/
 const profileAddButton = document.querySelector('.profile__add');
@@ -61,17 +51,18 @@ function handleFormEditSubmit(evt) {
   profileInfoName.textContent = nameInput.value;
   profilIinfoText.textContent = infoInput.value;
 }
-formElement.addEventListener('submit', handleFormEditSubmit);
+popupForm.addEventListener('submit', handleFormEditSubmit);
 
 function handleFormAddSubmit(evt) {
   evt.preventDefault();
-  allCard.prepend(
+  cardSection.prepend(
     createCard({
       link: urlInput.value,
       name: titleInput.value,
     })
   );
   closePopup(popupAdd);
+  formElementAdd.reset();
 }
 formElementAdd.addEventListener('submit', handleFormAddSubmit);
 
@@ -130,7 +121,7 @@ const createCard = (object) => {
   return newCard;
 };
 
-const allCard = document.querySelector('.places');
+const cardSection = document.querySelector('.places');
 initialCards.forEach((card) => {
-  allCard.append(createCard(card));
+  cardSection.append(createCard(card));
 });
