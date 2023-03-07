@@ -1,23 +1,37 @@
 /* открыть и закрыть popup  edit*/
 const profileEdit = document.querySelector('.profile__edit');
 const popupEdit = document.querySelector('.popup_type_edit');
-
 // popup_type_image переменные
 const placePhotobutton = document.querySelector('.place__photo');
 const popupImage = document.querySelector('.popup_type_image');
 const popupPicture = document.querySelector('.popup__picture');
 const popupTextImage = document.querySelector('.popup__text');
 
+const clearValidation = (popup, object) => {
+  const formElement = popup.querySelector(object.formSelector);
+  const buttonElement = formElement.querySelector(object.submitButtonSelector);
+  const inputList = Array.from(
+    formElement.querySelectorAll(object.inputSelector)
+  );
+  toggleButtonState(inputList, buttonElement, object);
+  inputList.forEach((inputElement) => {
+    hideInputError(formElement, inputElement, object);
+  });
+};
+
 const openPopup = (popupElement) => {
   popupElement.classList.add('popup_opened');
+  document.addEventListener('keydown', closePopupEsc);
 };
 const closePopup = (popupElement) => {
   popupElement.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closePopupEsc);
 };
 profileEdit.addEventListener('click', () => {
   openPopup(popupEdit);
   nameInput.value = profileInfoName.textContent;
   infoInput.value = profilIinfoText.textContent;
+  clearValidation(popupEdit, objectValidate);
 });
 
 const closeButtons = document.querySelectorAll('.popup__close');
@@ -43,6 +57,8 @@ const placeName = document.querySelector('.place__name ');
 
 profileAddButton.addEventListener('click', () => {
   openPopup(popupAdd);
+  formElementAdd.reset();
+  clearValidation(popupAdd, objectValidate);
 });
 
 function handleFormEditSubmit(evt) {
@@ -62,7 +78,6 @@ function handleFormAddSubmit(evt) {
     })
   );
   closePopup(popupAdd);
-  formElementAdd.reset();
 }
 formElementAdd.addEventListener('submit', handleFormAddSubmit);
 
@@ -124,4 +139,22 @@ const createCard = (object) => {
 const cardSection = document.querySelector('.places');
 initialCards.forEach((card) => {
   cardSection.append(createCard(card));
+});
+
+const closePopupEsc = (event) => {
+  if (event.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+  }
+};
+
+const closePopupOverlay = (event) => {
+  if (event.target === event.currentTarget) {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+  }
+};
+const popups = document.querySelectorAll('.popup');
+popups.forEach((popup) => {
+  popup.addEventListener('click', closePopupOverlay);
 });
