@@ -8,6 +8,18 @@ const objectValidate = {
   errorClass: 'popup__input-error_active',
 };
 
+const clearValidation = (popup, object) => {
+  const formElement = popup.querySelector(object.formSelector);
+  const buttonElement = formElement.querySelector(object.submitButtonSelector);
+  const inputList = Array.from(
+    formElement.querySelectorAll(object.inputSelector)
+  );
+  toggleButtonState(inputList, buttonElement, object);
+  inputList.forEach((inputElement) => {
+    hideInputError(formElement, inputElement, object);
+  });
+};
+
 const showInputError = (formElement, inputElement, errorMessage, object) => {
   // Находим элемент ошибки внутри самой функции
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);

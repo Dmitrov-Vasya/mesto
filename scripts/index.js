@@ -7,18 +7,6 @@ const popupImage = document.querySelector('.popup_type_image');
 const popupPicture = document.querySelector('.popup__picture');
 const popupTextImage = document.querySelector('.popup__text');
 
-const clearValidation = (popup, object) => {
-  const formElement = popup.querySelector(object.formSelector);
-  const buttonElement = formElement.querySelector(object.submitButtonSelector);
-  const inputList = Array.from(
-    formElement.querySelectorAll(object.inputSelector)
-  );
-  toggleButtonState(inputList, buttonElement, object);
-  inputList.forEach((inputElement) => {
-    hideInputError(formElement, inputElement, object);
-  });
-};
-
 const openPopup = (popupElement) => {
   popupElement.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupEsc);
@@ -150,7 +138,6 @@ const closePopupEsc = (event) => {
 
 const closePopupOverlay = (event) => {
   if (event.target === event.currentTarget) {
-    const popupOpened = document.querySelector('.popup_opened');
     closePopup(popupOpened);
   }
 };
