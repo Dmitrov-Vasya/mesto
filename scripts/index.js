@@ -138,7 +138,7 @@ const closePopupEsc = (event) => {
 
 const closePopupOverlay = (event) => {
   if (event.target === event.currentTarget) {
-    closePopup(popupOpened);
+    closePopup(event.currentTarget);
   }
 };
 const popups = document.querySelectorAll('.popup');
